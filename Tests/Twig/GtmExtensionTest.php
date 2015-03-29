@@ -5,6 +5,11 @@ namespace Evheniy\GtmBundle\Tests\Twig;
 use Evheniy\GtmBundle\Twig\GtmExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
+/**
+ * Class GtmExtensionTest
+ *
+ * @package Evheniy\GtmBundle\Tests\Twig
+ */
 class GtmExtensionTest extends \PHPUnit_Framework_TestCase
 {
     /**
@@ -26,32 +31,35 @@ class GtmExtensionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     *
+     * Test normal config
      */
     public function testWithId()
     {
-        $this->loadConfiguration($this->container, 'withId');
-        $this->container->compile();
+        $this->container->setParameter('gtm', 'test');
 
-        $this->assertFalse($this->container->has('gtm.id'));
+        $this->assertTrue($this->container->hasParameter('gtm'));
+        $this->assertEquals($this->container->getParameter('gtm'), 'test');
+        $this->assertEquals($this->extension->getGlobals()['gtm'], 'test');
     }
 
     /**
-     *
+     * Test empty config
      */
     public function testWithOutId()
     {
-        $this->loadConfiguration($this->container, 'withOutId');
-        $this->container->compile();
-
-        $this->assertTrue($this->container->has('gtm.id'));
+        $this->assertFalse($this->container->hasParameter('gtm'));
+        $this->setExpectedException(
+            'Exception',
+            'You have requested a non-existent parameter "gtm".'
+        );
+        $this->assertTrue(empty($this->extension->getGlobals()));
     }
 
     /**
-     * 
+     * Test getName()
      */
     public function testGetName()
     {
-        $this->assertEqual($this->extension->getName(), 'gtm');
+        $this->assertEquals($this->extension->getName(), 'gtm');
     }
 } 

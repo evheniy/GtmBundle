@@ -13,6 +13,13 @@ You need to set GTM ID:
 Installation
 ------------
 
+    $ composer require evheniy/gtm-bundle "1.*"
+
+    Or add to composer.json
+
+    "evheniy/gtm-bundle": "1.*"
+
+
     AppKernel:
         public function registerBundles()
             {
@@ -41,5 +48,5 @@ This bundle is under the MIT license. See the complete license in the bundle:
 
 [Google Tag Manager][2]
 
-[1]:  http://makedev.org/
+[1]:  http://makedev.org/articles/symfony/bundles/gtm_bundle.html
 [2]:  http://www.google.com/tagmanager/

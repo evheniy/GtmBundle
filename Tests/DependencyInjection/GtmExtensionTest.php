@@ -2,10 +2,10 @@
 
 namespace Evheniy\GtmBundle\Tests\DependencyInjection;
 
-use Evheniy\GtmBundle\DependencyInjection\GtmExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Evheniy\GtmBundle\DependencyInjection\GtmExtension;
 
 /**
  * Class GtmExtensionTest
@@ -45,35 +45,39 @@ class GtmExtensionTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     *
+     * Test empty config
      */
     public function testWithoutConfiguration()
     {
+        $this->setExpectedException('Exception', 'Undefined index: id');
+
         $this->container->loadFromExtension($this->extension->getAlias());
         $this->container->compile();
 
-        $this->assertFalse($this->container->has('gtm.id'));
+        $this->assertFalse($this->container->hasParameter('gtm'));
     }
 
     /**
-     *
+     * Test normal config
      */
     public function testWithId()
     {
         $this->loadConfiguration($this->container, 'withId');
         $this->container->compile();
 
-        $this->assertFalse($this->container->has('gtm.id'));
+        $this->assertTrue($this->container->hasParameter('gtm'));
+        $this->assertEquals($this->container->getParameter('gtm'), 'test');
     }
 
     /**
-     *
+     * Test wrong config
      */
     public function testWithOutId()
     {
+        $this->setExpectedException('Exception', 'Undefined index: id');
+
         $this->loadConfiguration($this->container, 'withOutId');
         $this->container->compile();
-
-        $this->assertTrue($this->container->has('gtm.id'));
+        $this->assertFalse($this->container->hasParameter('gtm'));
     }
 } 
