@@ -46,4 +46,12 @@ class GtmExtensionTest extends \PHPUnit_Framework_TestCase
 
         $this->assertTrue($this->container->has('gtm.id'));
     }
+
+    /**
+     * 
+     */
+    public function testGetName()
+    {
+        $this->assertEqual($this->extension->getName(), 'gtm');
+    }
 } 
