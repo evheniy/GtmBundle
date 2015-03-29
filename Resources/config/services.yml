@@ -1,0 +1,6 @@
+services:
+    evheniy.twig.jtm_extension:
+        class: Evheniy\GtmBundle\Twig\GtmExtension
+        arguments: [@service_container]
+        tags:
+            - { name: twig.extension }
