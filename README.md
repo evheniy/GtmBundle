@@ -41,5 +41,5 @@ This bundle is under the MIT license. See the complete license in the bundle:
 
 [Google Tag Manager][2]
 
-[1]:  http://makedev.org/articles/symfony/bundles/gtm_bundle.html
+[1]:  http://makedev.org/
 [2]:  http://www.google.com/tagmanager/
