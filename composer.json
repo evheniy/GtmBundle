@@ -1,5 +1,6 @@
 {
     "name": "evheniy/gtm-bundle",
+    "version": "1.0",
     "description": "The GtmBundle adds the ability to add Google Tag Manager code to your application.",
     "keywords": ["Google", "Tag", "Manager", "GTM", "Symfony", "latest"],
     "type": "symfony-bundle",

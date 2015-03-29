@@ -8,7 +8,8 @@ Documentation
 
 You need to set GTM ID:
 
-    gtm: GTM-xxx
+    gtm:
+        id: GTM-xxx
 
 Installation
 ------------
@@ -32,7 +33,8 @@ Installation
 
     config.yml:
         #GtmBundle
-        gtm: GTM-xxx
+        gtm:
+            id: GTM-xxx
 
 
     {% include "GtmBundle:Gtm:gtm.html.twig" %}
