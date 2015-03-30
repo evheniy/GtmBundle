@@ -49,7 +49,7 @@ class GtmExtensionTest extends \PHPUnit_Framework_TestCase
      */
     public function testWithoutConfiguration()
     {
-        $this->setExpectedException('Exception', 'Undefined index: id');
+        $this->setExpectedException('PHPUnit_Framework_Error', 'Undefined index: id');
 
         $this->container->loadFromExtension($this->extension->getAlias());
         $this->container->compile();
@@ -74,7 +74,7 @@ class GtmExtensionTest extends \PHPUnit_Framework_TestCase
      */
     public function testWithOutId()
     {
-        $this->setExpectedException('Exception', 'Undefined index: id');
+        $this->setExpectedException('PHPUnit_Framework_Error', 'Undefined index: id');
 
         $this->loadConfiguration($this->container, 'withOutId');
         $this->container->compile();
