@@ -30,7 +30,7 @@ class GtmExtension extends \Twig_Extension
     public function getGlobals()
     {
         return array(
-            'gtm' => $this->container->getParameter('gtm')
+            'gtmId' => $this->container->getParameter('gtm')
         );
     }
 

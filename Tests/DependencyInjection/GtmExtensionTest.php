@@ -49,7 +49,10 @@ class GtmExtensionTest extends \PHPUnit_Framework_TestCase
      */
     public function testWithoutConfiguration()
     {
-        $this->setExpectedException('PHPUnit_Framework_Error', 'Undefined index: id');
+        $this->setExpectedException(
+            'Symfony\Component\Config\Definition\Exception\InvalidConfigurationException',
+            'The child node "id" at path "gtm" must be configured.'
+        );
 
         $this->container->loadFromExtension($this->extension->getAlias());
         $this->container->compile();
@@ -66,7 +69,7 @@ class GtmExtensionTest extends \PHPUnit_Framework_TestCase
         $this->container->compile();
 
         $this->assertTrue($this->container->hasParameter('gtm'));
-        $this->assertEquals($this->container->getParameter('gtm'), 'test');
+        $this->assertEquals($this->container->getParameter('gtm')['id'], 'test');
     }
 
     /**
@@ -74,7 +77,10 @@ class GtmExtensionTest extends \PHPUnit_Framework_TestCase
      */
     public function testWithOutId()
     {
-        $this->setExpectedException('PHPUnit_Framework_Error', 'Undefined index: id');
+        $this->setExpectedException(
+            'Symfony\Component\Config\Definition\Exception\InvalidConfigurationException',
+            'The child node "id" at path "gtm" must be configured.'
+        );
 
         $this->loadConfiguration($this->container, 'withOutId');
         $this->container->compile();

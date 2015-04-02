@@ -39,7 +39,7 @@ class GtmExtensionTest extends \PHPUnit_Framework_TestCase
 
         $this->assertTrue($this->container->hasParameter('gtm'));
         $this->assertEquals($this->container->getParameter('gtm'), 'test');
-        $this->assertEquals($this->extension->getGlobals()['gtm'], 'test');
+        $this->assertEquals($this->extension->getGlobals()['gtmId'], 'test');
     }
 
     /**
