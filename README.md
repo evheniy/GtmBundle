@@ -52,4 +52,4 @@ This bundle is under the [MIT][3] license.
 
 [1]:  http://makedev.org/articles/symfony/bundles/gtm_bundle.html
 [2]:  http://www.google.com/tagmanager/
-[3]:  https://github.com/evheniy/JqueryBundle/blob/master/Resources/meta/LICENSE
+[3]:  https://github.com/evheniy/GtmBundle/blob/master/Resources/meta/LICENSE
