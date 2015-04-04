@@ -1,6 +1,8 @@
 GtmBundle
 =================
 
+[![knpbundles.com](http://knpbundles.com/evheniy/GtmBundle/badge)](http://knpbundles.com/evheniy/GtmBundle)
+
 This bundle provides Google Tag Manager in Symfony2
 
 Documentation
