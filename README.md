@@ -3,6 +3,8 @@ GtmBundle
 
 [![knpbundles.com](http://knpbundles.com/evheniy/GtmBundle/badge)](http://knpbundles.com/evheniy/GtmBundle)
 
+[![Latest Stable Version](https://poser.pugx.org/evheniy/gtm-bundle/v/stable.svg)](https://packagist.org/packages/evheniy/gtm-bundle) [![Total Downloads](https://poser.pugx.org/evheniy/gtm-bundle/downloads.svg)](https://packagist.org/packages/evheniy/gtm-bundle) [![Latest Unstable Version](https://poser.pugx.org/evheniy/gtm-bundle/v/unstable.svg)](https://packagist.org/packages/evheniy/gtm-bundle) [![License](https://poser.pugx.org/evheniy/gtm-bundle/license.svg)](https://packagist.org/packages/evheniy/gtm-bundle)
+
 This bundle provides Google Tag Manager in Symfony2
 
 Documentation
