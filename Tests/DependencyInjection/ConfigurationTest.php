@@ -3,32 +3,48 @@
 namespace Evheniy\GtmBundle\Tests\DependencyInjection;
 
 use Evheniy\GtmBundle\DependencyInjection\Configuration;
+use Matthias\SymfonyConfigTest\PhpUnit\AbstractConfigurationTestCase;
 
 /**
  * Class ConfigurationTest
  *
  * @package Evheniy\GtmBundle\Tests\DependencyInjection
  */
-class ConfigurationTest extends \PHPUnit_Framework_TestCase
+class ConfigurationTest extends AbstractConfigurationTestCase
 {
+    /**
+     * @return Configuration
+     */
+    protected function getConfiguration()
+    {
+        return new Configuration();
+    }
+
     /**
      * Test getConfigTreeBuilder()
      */
     public function testGetConfigTreeBuilder()
     {
-        $configuration = new Configuration();
-        $tree = $configuration->getConfigTreeBuilder();
-        $this->assertInstanceOf(
-            'Symfony\Component\Config\Definition\Builder\TreeBuilder',
-            $tree
+        $this->assertConfigurationIsInvalid(
+            array(
+                'id' => array()
+            ),
+            'gtm'
         );
-        $this->assertInstanceOf(
-            'Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition',
-            $tree->root('gtm')
+        $this->assertConfigurationIsInvalid(
+            array(
+            ),
+            'gtm'
         );
-        $tree = $tree->buildTree();
-        $this->assertEquals('gtm', $tree->getName());
-        $this->assertFalse($tree->hasDefaultValue());
-        $this->assertFalse($tree->isRequired());
+        $this->assertConfigurationIsInvalid(
+            array(
+                array()
+            ),
+            'gtm'
+        );
+        $this->assertConfigurationIsInvalid(
+            array(
+            )
+        );
     }
 } 
