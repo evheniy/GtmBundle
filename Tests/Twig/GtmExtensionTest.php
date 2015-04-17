@@ -52,7 +52,7 @@ class GtmExtensionTest extends \PHPUnit_Framework_TestCase
             'Exception',
             'You have requested a non-existent parameter "gtm".'
         );
-        $this->assertTrue(empty($this->extension->getGlobals()));
+        $this->assertEmpty($this->extension->getGlobals()));
     }
 
     /**
