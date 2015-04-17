@@ -7,6 +7,8 @@ GtmBundle
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/evheniy/GtmBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/evheniy/GtmBundle/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/evheniy/GtmBundle/badges/build.png?b=master)](https://scrutinizer-ci.com/g/evheniy/GtmBundle/build-status/master)
 
+[![Build Status](https://travis-ci.org/evheniy/GtmBundle.svg?branch=master)](https://travis-ci.org/evheniy/GtmBundle)
+
 This bundle provides Google Tag Manager in Symfony2
 
 Documentation
