@@ -67,4 +67,4 @@ class GtmExtensionTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertEquals($this->extension->getName(), 'gtm');
     }
-} 
+}

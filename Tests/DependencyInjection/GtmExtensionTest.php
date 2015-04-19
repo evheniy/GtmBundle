@@ -67,7 +67,6 @@ class GtmExtensionTest extends \PHPUnit_Framework_TestCase
     {
         $this->loadConfiguration($this->container, 'withId');
         $this->container->compile();
-
         $this->assertTrue($this->container->hasParameter('gtm'));
         $gtm = $this->container->getParameter('gtm');
         $this->assertNotEmpty($gtm['id']);
@@ -88,4 +87,4 @@ class GtmExtensionTest extends \PHPUnit_Framework_TestCase
         $this->container->compile();
         $this->assertFalse($this->container->hasParameter('gtm'));
     }
-} 
+}
