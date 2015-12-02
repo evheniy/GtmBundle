@@ -23,7 +23,7 @@ env:
   - SYMFONY_VERSION=3.0.*
 
 before_script:
-  - if [[ "$php" < 5.5 ]] && [[ "$SYMFONY_VERSION" = "3.0.*" ]] ; then export SYMFONY_VERSION="2.7.*"; fi;
+  - if [[ "$php" < 5.5 ]] && [[ "$SYMFONY_VERSION" = "3.0.*" ]]; then export SYMFONY_VERSION="2.7.*"; fi;
   - composer require symfony/symfony:${SYMFONY_VERSION} --no-update
   - composer update --dev
 
