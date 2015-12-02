@@ -5,9 +5,9 @@ GtmBundle
 
 [![Latest Stable Version](https://poser.pugx.org/evheniy/gtm-bundle/v/stable.svg)](https://packagist.org/packages/evheniy/gtm-bundle) [![Total Downloads](https://poser.pugx.org/evheniy/gtm-bundle/downloads.svg)](https://packagist.org/packages/evheniy/gtm-bundle) [![Latest Unstable Version](https://poser.pugx.org/evheniy/gtm-bundle/v/unstable.svg)](https://packagist.org/packages/evheniy/gtm-bundle) [![License](https://poser.pugx.org/evheniy/gtm-bundle/license.svg)](https://packagist.org/packages/evheniy/gtm-bundle)
 
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/evheniy/GtmBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/evheniy/GtmBundle/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/evheniy/GtmBundle/badges/build.png?b=master)](https://scrutinizer-ci.com/g/evheniy/GtmBundle/build-status/master)
-
 [![Build Status](https://travis-ci.org/evheniy/GtmBundle.svg?branch=master)](https://travis-ci.org/evheniy/GtmBundle)
+[![Coverage Status](https://coveralls.io/repos/evheniy/GtmBundle/badge.svg?branch=master&service=github)](https://coveralls.io/github/evheniy/GtmBundle?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/evheniy/GtmBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/evheniy/GtmBundle/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/evheniy/GtmBundle/badges/build.png?b=master)](https://scrutinizer-ci.com/g/evheniy/GtmBundle/build-status/master)
 
 This bundle provides Google Tag Manager in Symfony2
 
